@@ -43,18 +43,18 @@ const Stack = createNativeStackNavigator();
 
 function App() {
   return (
-    <NavigationContainer style={styles.container}>
-      <Stack.Navigator initialRouteName="Home">
+    <NavigationContainer style={styles.container}
+    >
+      <Stack.Navigator initialRouteName="Home"
+       >
         <Stack.Screen
           name="Home"
           component={HomeScreen}
           // options={{ title: "Overview", backgroundColor: "transparent" }}
-          options={{ headerShown: false }}
+          options={}
         />
         <Stack.Screen name="test" component={ViewOne} />
-        <Stack.Screen name="sign" component={SignView} 
-          options={{ headerShown: false }}
-        />
+        <Stack.Screen name="sign" component={SignView} />
         <Stack.Screen name="Main" component={MainView} />
       </Stack.Navigator>
     </NavigationContainer>

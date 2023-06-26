@@ -8,7 +8,6 @@ import * as ImagePicker from "expo-image-picker";
 import { useState } from "react";
 const PlaceholderImage = require("../assets/images/background-image.png");
 import * as React from "react";
-import FontAwesome from "react-native-vector-icons/FontAwesome";
 import {
   FlatList,
   Image,
@@ -47,10 +46,7 @@ export function SignView({ navigation }) {
         <Text style={styles.infoText}>请输入信息以完成注册</Text>
       </View>
       <View style={styles.inputBar}>
-        <FontAwesome name="user" size={20} style={{ marginLeft: 25 }}>
-          <Text style={styles.smallText}>用户名</Text>
-        </FontAwesome>
-
+        <Text style={styles.smallText}>用户名</Text>
         <TextInput
           maxLength={40}
           onChangeText={(text) => onChangeText(text)}
@@ -60,9 +56,7 @@ export function SignView({ navigation }) {
         />
       </View>
       <View style={styles.inputBar}>
-        <FontAwesome name="lock" size={20} style={{ marginLeft: 25 }}>
-          <Text style={styles.smallText}>密码</Text>
-        </FontAwesome>
+        <Text style={styles.smallText}>密码</Text>
         <TextInput
           style={styles.input}
           placeholder="请输入密码"
@@ -70,13 +64,13 @@ export function SignView({ navigation }) {
         />
       </View>
       <View style={styles.inputBar}>
-        <FontAwesome name="lock" size={20} style={{ marginLeft: 25 }}>
-          <Text style={styles.smallText}>重复密码</Text>
-        </FontAwesome>
+        <Text editable style={styles.smallText}>
+          重复密码
+        </Text>
         <TextInput
           style={styles.input}
           placeholder="请再次输入密码"
-          secureTextEntry={true}
+         
         />
       </View>
       {/* <View style={styles.footerContainer}>
@@ -125,10 +119,10 @@ const styles = StyleSheet.create({
   smallText: {
     fontSize: PixelRatio.getFontScale() * 15,
     color: "#aaa",
-    // paddingLeft: 20
+    marginLeft: 20,
   },
   footerContainer: {
-    flex: 1 / 2,
+    flex: 1/2,
     alignItems: "center",
     backgroundColor: "#500B82",
     width: 380,
@@ -154,9 +148,5 @@ const styles = StyleSheet.create({
     padding: 10,
     width: 320,
     borderRadius: 10,
-    borderTopColor: "#eee",
-    borderLeftColor: "#Fff",
-    borderRightColor: "#ccc",
-    borderBottomColor: "#1A252D",
   },
 });

@@ -70,9 +70,9 @@ export function SignView({ navigation }) {
         />
       </View>
       <View style={styles.inputBar}>
-        <FontAwesome name="lock" size={20} style={{ marginLeft: 25 }}>
-          <Text style={styles.smallText}>重复密码</Text>
-        </FontAwesome>
+        <Text editable style={styles.smallText}>
+          重复密码
+        </Text>
         <TextInput
           style={styles.input}
           placeholder="请再次输入密码"
@@ -154,9 +154,5 @@ const styles = StyleSheet.create({
     padding: 10,
     width: 320,
     borderRadius: 10,
-    borderTopColor: "#eee",
-    borderLeftColor: "#Fff",
-    borderRightColor: "#ccc",
-    borderBottomColor: "#1A252D",
   },
 });

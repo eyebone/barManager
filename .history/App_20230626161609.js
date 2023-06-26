@@ -10,7 +10,6 @@ import { SignView } from "./view/Sign";
 import { LinearGradient } from "expo-linear-gradient";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import { MainView } from "./view/Main";
-
 function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
@@ -43,18 +42,19 @@ const Stack = createNativeStackNavigator();
 
 function App() {
   return (
-    <NavigationContainer style={styles.container}>
+    <NavigationContainer style={styles.container}
+    navigationOptions:{
+      heade
+    }
+    >
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen
           name="Home"
           component={HomeScreen}
-          // options={{ title: "Overview", backgroundColor: "transparent" }}
-          options={{ headerShown: false }}
+          options={{ title: "Overview", backgroundColor: "transparent" }}
         />
         <Stack.Screen name="test" component={ViewOne} />
-        <Stack.Screen name="sign" component={SignView} 
-          options={{ headerShown: false }}
-        />
+        <Stack.Screen name="sign" component={SignView} />
         <Stack.Screen name="Main" component={MainView} />
       </Stack.Navigator>
     </NavigationContainer>

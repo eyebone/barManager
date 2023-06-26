@@ -47,7 +47,7 @@ export function SignView({ navigation }) {
         <Text style={styles.infoText}>请输入信息以完成注册</Text>
       </View>
       <View style={styles.inputBar}>
-        <FontAwesome name="user" size={20} style={{ marginLeft: 25 }}>
+        <FontAwesome name="user" size={20} style={{ marginLeft: 20 }}>
           <Text style={styles.smallText}>用户名</Text>
         </FontAwesome>
 
@@ -60,9 +60,7 @@ export function SignView({ navigation }) {
         />
       </View>
       <View style={styles.inputBar}>
-        <FontAwesome name="lock" size={20} style={{ marginLeft: 25 }}>
-          <Text style={styles.smallText}>密码</Text>
-        </FontAwesome>
+        <Text style={styles.smallText}>密码</Text>
         <TextInput
           style={styles.input}
           placeholder="请输入密码"
@@ -70,9 +68,9 @@ export function SignView({ navigation }) {
         />
       </View>
       <View style={styles.inputBar}>
-        <FontAwesome name="lock" size={20} style={{ marginLeft: 25 }}>
-          <Text style={styles.smallText}>重复密码</Text>
-        </FontAwesome>
+        <Text editable style={styles.smallText}>
+          重复密码
+        </Text>
         <TextInput
           style={styles.input}
           placeholder="请再次输入密码"
@@ -125,7 +123,7 @@ const styles = StyleSheet.create({
   smallText: {
     fontSize: PixelRatio.getFontScale() * 15,
     color: "#aaa",
-    // paddingLeft: 20
+    marginLeft: 25,
   },
   footerContainer: {
     flex: 1 / 2,
@@ -154,9 +152,5 @@ const styles = StyleSheet.create({
     padding: 10,
     width: 320,
     borderRadius: 10,
-    borderTopColor: "#eee",
-    borderLeftColor: "#Fff",
-    borderRightColor: "#ccc",
-    borderBottomColor: "#1A252D",
   },
 });

@@ -154,9 +154,6 @@ const styles = StyleSheet.create({
     padding: 10,
     width: 320,
     borderRadius: 10,
-    borderTopColor: "#eee",
-    borderLeftColor: "#Fff",
-    borderRightColor: "#ccc",
-    borderBottomColor: "#1A252D",
+    border'B'o
   },
 });

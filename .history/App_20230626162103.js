@@ -52,9 +52,7 @@ function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen name="test" component={ViewOne} />
-        <Stack.Screen name="sign" component={SignView} 
-          options={{ headerShown: false }}
-        />
+        <Stack.Screen name="sign" component={SignView} />
         <Stack.Screen name="Main" component={MainView} />
       </Stack.Navigator>
     </NavigationContainer>

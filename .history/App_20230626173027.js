@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { Button, View, Text, StyleSheet, Pressable, Alert } from "react-native";
+// import React-native from 'react-native';
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { ViewOne } from "./view/ViewOne";
@@ -9,8 +10,6 @@ import { SignView } from "./view/Sign";
 import { LinearGradient } from "expo-linear-gradient";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import { MainView } from "./view/Main";
-import { NavigationBar } from "./components/NavigationBar";
-
 
 function HomeScreen({ navigation }) {
   return (
@@ -52,16 +51,11 @@ function App() {
           // options={{ title: "Overview", backgroundColor: "transparent" }}
           options={{ headerShown: false }}
         />
-
         <Stack.Screen name="test" component={ViewOne} />
-        <Stack.Screen
-          name="sign"
-          component={SignView}
+        <Stack.Screen name="sign" component={SignView} 
           options={{ headerShown: false }}
         />
-        <Stack.Screen
-          name="Main"
-          component={MainView}
+        <Stack.Screen name="Main" component={MainView} 
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
@@ -87,16 +81,6 @@ const styles = StyleSheet.create({
     height: 30,
     alignItems: "center",
     justifyContent: "center",
-    flexDirection: "row",
-  },
-  mainlinearGradient: {
-    height: 825,
-  },
-  bar: {
-    width: 380,
-    height: 65,
-    backgroundColor: "#C8BFDB",
-    marginTop: 674,
     flexDirection: "row",
   },
 });

@@ -22,24 +22,38 @@ export function MainView({ navigation }) {
       start={{ x: 0, y: 0 }}
       end={{ x: 1, y: 1 }}
       colors={["#5c0b82", "#480965", "#190641", "#070320", "#000000"]}
-      style={styles.mainlinearGradient}
+      style={styles.linearGradient}
     >
       <Text>Main Screen</Text>
-      <Pressable style={(styles.button, { backgroundColor: "#faf2de" })}>
+      <Pressable
+        style={(styles.button, { backgroundColor: "#faf2de" })}
+        onPress={() => navigation.push("Home")}
+      >
         <FontAwesome name="home" size={26} style={{ paddingRight: 8 }} />
         <Text>go to detail</Text>
       </Pressable>
 
       <Text style={styles.buttonText}>Sign in with Facebook</Text>
-      {/* 此处易错！1.记得传参，2. 传的应该是navigation而不是this.navigation */}
-      <NavigationBar navigation={navigation} />
     </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
-  mainlinearGradient: {
-    height: 825,
+  container: {
+    flex: 1,
+    flexDirection: "column",
+    backgroundColor: "#000000",
+    //    alignItems: 'center',
   },
-
+  linearGradient: {
+    height: 740,
+  },
+  button: {
+    borderRadius: 10,
+    width: 300,
+    height: 30,
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "row",
+  },
 });

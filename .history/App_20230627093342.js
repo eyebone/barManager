@@ -11,6 +11,51 @@ import FontAwesome from "react-native-vector-icons/FontAwesome";
 import { MainView } from "./view/Main";
 import { NavigationBar } from "./components/NavigationBar";
 
+// function MainView({ navigation }) {
+  return (
+    <LinearGradient
+      start={{ x: 0, y: 0 }}
+      end={{ x: 1, y: 1 }}
+      colors={["#5c0b82", "#480965", "#190641", "#070320", "#000000"]}
+      style={styles.linearGradient}
+    >
+      <Text>Main Screen</Text>
+
+      <NavigationBar navigation={navigation} />
+    </LinearGradient>
+  );
+// }
+
+// function NavigationBar({ navigation }) {
+  return (
+    <View style={styles.bar}>
+      <Pressable
+        style={{ marginLeft: 20, marginTop: 12 }}
+        onPress={() => {
+          alert("you pressed nav button");
+          navigation.push("Home");
+        }}
+      >
+        <FontAwesome name="home" size={34}></FontAwesome>
+      </Pressable>
+      <Pressable>
+        <FontAwesome
+          name="heart"
+          size={34}
+          style={{ marginLeft: 120, marginTop: 12 }}
+        ></FontAwesome>
+      </Pressable>
+      {/* <CircleButton /> */}
+      <Pressable>
+        <FontAwesome
+          name="cog"
+          size={34}
+          style={{ marginLeft: 120, marginTop: 12 }}
+        ></FontAwesome>
+      </Pressable>
+    </View>
+  );
+}
 
 function HomeScreen({ navigation }) {
   return (

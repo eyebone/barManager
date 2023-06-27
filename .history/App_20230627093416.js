@@ -8,8 +8,8 @@ import { ViewOne } from "./view/ViewOne";
 import { SignView } from "./view/Sign";
 import { LinearGradient } from "expo-linear-gradient";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
-import { MainView } from "./view/Main";
-import { NavigationBar } from "./components/NavigationBar";
+// import { MainView } from "./view/Main";
+// import { NavigationBar } from "./components/NavigationBar";
 
 
 function HomeScreen({ navigation }) {

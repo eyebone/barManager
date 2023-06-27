@@ -79,6 +79,9 @@ export function SignView({ navigation }) {
           secureTextEntry={true}
         />
       </View>
+      {/* <View style={styles.footerContainer}>
+        <Text style={styles.regText}>注册</Text>
+      </View> */}
       <LinearGradient
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
@@ -146,9 +149,9 @@ const styles = StyleSheet.create({
     // borderBottomWidth: 1,
   },
   regText: {
-    fontSize: PixelRatio.getFontScale() * 22,
+    fontSize: PixelRatio.getFontScale() * 24,
     color: "#fff",
-    margin: 21,
+    margin: 20,
   },
   input: {
     height: 45,
@@ -156,10 +159,10 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 10,
     width: 320,
-    // borderRadius: 10,
-    borderTopColor: "#fff",
+    borderRadius: 10,
+    borderTopColor: "#eee",
     borderLeftColor: "#Fff",
-    borderRightColor: "#fff",
+    borderRightColor: "#ccc",
     borderBottomColor: "#1A252D",
   },
   linearGradient: {

@@ -8,9 +8,24 @@ import { ViewOne } from "./view/ViewOne";
 import { SignView } from "./view/Sign";
 import { LinearGradient } from "expo-linear-gradient";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
-import { MainView } from "./view/Main";
+// import { MainView } from "./view/Main";
 import { NavigationBar } from "./components/NavigationBar";
 
+function MainView({ navigation }) {
+  return (
+    <LinearGradient
+      start={{ x: 0, y: 0 }}
+      end={{ x: 1, y: 1 }}
+      colors={["#5c0b82", "#480965", "#190641", "#070320", "#000000"]}
+      style={styles.linearGradient}
+    >
+      <Text>Main Screen</Text>
+
+ 
+      <NavigationBar />
+    </LinearGradient>
+  );
+}
 
 function HomeScreen({ navigation }) {
   return (

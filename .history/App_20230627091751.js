@@ -11,6 +11,25 @@ import FontAwesome from "react-native-vector-icons/FontAwesome";
 import { MainView } from "./view/Main";
 import { NavigationBar } from "./components/NavigationBar";
 
+function MainView({ navigation }) {
+  return (
+    <LinearGradient
+      start={{ x: 0, y: 0 }}
+      end={{ x: 1, y: 1 }}
+      colors={["#5c0b82", "#480965", "#190641", "#070320", "#000000"]}
+      style={styles.linearGradient}
+    >
+      <Text>Main Screen</Text>
+      <Pressable style={(styles.button, { backgroundColor: "#faf2de" })}>
+        <FontAwesome name="home" size={26} style={{ paddingRight: 8 }} />
+        <Text>go to detail</Text>
+      </Pressable>
+
+      <Text style={styles.buttonText}>Sign in with Facebook</Text>
+      <NavigationBar />
+    </LinearGradient>
+  );
+}
 
 function HomeScreen({ navigation }) {
   return (
@@ -87,16 +106,6 @@ const styles = StyleSheet.create({
     height: 30,
     alignItems: "center",
     justifyContent: "center",
-    flexDirection: "row",
-  },
-  mainlinearGradient: {
-    height: 825,
-  },
-  bar: {
-    width: 380,
-    height: 65,
-    backgroundColor: "#C8BFDB",
-    marginTop: 674,
     flexDirection: "row",
   },
 });

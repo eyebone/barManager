@@ -25,14 +25,17 @@ export function MainView({ navigation }) {
       style={styles.mainlinearGradient}
     >
       <Text>Main Screen</Text>
-      <Pressable style={(styles.button, { backgroundColor: "#faf2de" })}>
+      <Pressable
+        style={(styles.button, { backgroundColor: "#faf2de" })}
+       
+      >
         <FontAwesome name="home" size={26} style={{ paddingRight: 8 }} />
         <Text>go to detail</Text>
       </Pressable>
+      
 
       <Text style={styles.buttonText}>Sign in with Facebook</Text>
-      {/* 此处易错！1.记得传参，2. 传的应该是navigation而不是this.navigation */}
-      <NavigationBar navigation={navigation} />
+      <NavigationBar navigation={navigation}/> /** */
     </LinearGradient>
   );
 }

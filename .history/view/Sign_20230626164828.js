@@ -79,6 +79,9 @@ export function SignView({ navigation }) {
           secureTextEntry={true}
         />
       </View>
+      {/* <View style={styles.footerContainer}>
+        <Text style={styles.regText}>注册</Text>
+      </View> */}
       <LinearGradient
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}

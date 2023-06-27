@@ -31,7 +31,7 @@ export function MainView({ navigation }) {
       </Pressable>
 
       <Text style={styles.buttonText}>Sign in with Facebook</Text>
-      {/* 此处易错！1.记得传参，2. 传的应该是navigation而不是this.navigation */}
+      {/* <Text style={styles.buttonText}>Sign in with Facebook</Text> */}
       <NavigationBar navigation={navigation} />
     </LinearGradient>
   );

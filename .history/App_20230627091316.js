@@ -10,8 +10,6 @@ import { LinearGradient } from "expo-linear-gradient";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import { MainView } from "./view/Main";
 import { NavigationBar } from "./components/NavigationBar";
-
-
 function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
@@ -87,16 +85,6 @@ const styles = StyleSheet.create({
     height: 30,
     alignItems: "center",
     justifyContent: "center",
-    flexDirection: "row",
-  },
-  mainlinearGradient: {
-    height: 825,
-  },
-  bar: {
-    width: 380,
-    height: 65,
-    backgroundColor: "#C8BFDB",
-    marginTop: 674,
     flexDirection: "row",
   },
 });
